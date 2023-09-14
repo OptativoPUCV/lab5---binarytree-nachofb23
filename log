@@ -35,3 +35,19 @@ treemap.c:94:34: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 44a9989
+Thu 14 Sep 2023 08:41:46 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:93:9: error: ‘else’ without a previous ‘if’
+   93 |       } else {
+      |         ^~~~
+treemap.c:94:34: error: expected ‘;’ before ‘}’ token
+   94 |           current = current->left
+      |                                  ^
+      |                                  ;
+   95 |       }
+      |       ~                           
+Compilation failed
+011a82c
