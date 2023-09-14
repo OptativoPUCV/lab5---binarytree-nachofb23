@@ -89,7 +89,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       } else if (cmp < 0) {
             current = current->left;
       } else {
-          current = current->right
+          current = current->right;
       }
     }
 
