@@ -1,0 +1,11 @@
+Thu 14 Sep 2023 07:53:10 PM UTC: 
+ treemap.c | 3 ---
+ 1 file changed, 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:40:1: error: control reaches end of non-void function [-Werror=return-type]
+   40 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+57845a9
