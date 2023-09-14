@@ -70,3 +70,21 @@ Thu 14 Sep 2023 08:42:58 PM UTC:
  tests:  6|7
 total_score: 5/70
 0cb8e73
+Thu 14 Sep 2023 08:45:42 PM UTC: 
+ treemap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+test.c: In function ‘minimum’:
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+test.c:607: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c66ffb9
