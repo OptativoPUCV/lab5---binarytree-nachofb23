@@ -118,3 +118,13 @@ Thu 14 Sep 2023 09:02:52 PM UTC:
  tests:  10|5
 total_score: 10/70
 52330e2
+Fri 15 Sep 2023 12:09:22 AM UTC: 
+ treemap.c | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:169:9: error: ‘TreeMap’ has no member named ‘left’
+  169 |     tree->left = current;
+      |         ^~
+Compilation failed
+12658bc
