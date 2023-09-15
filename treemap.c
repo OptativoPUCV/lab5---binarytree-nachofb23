@@ -219,8 +219,8 @@ Pair * upperBound(TreeMap * tree, void* key) {
 if (ub_node != NULL) {
   Pair* result = (Pair*)malloc(sizeof(Pair));
   if (result != NULL) {
-    result->key = ub_node->key;
-    result->value = ub_node->value;
+    result->key = ub_node->pair->key;
+    result->value = ub_node->pair->value;
   }
 
   return NULL;
