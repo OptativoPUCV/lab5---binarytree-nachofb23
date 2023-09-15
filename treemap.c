@@ -216,16 +216,17 @@ Pair * upperBound(TreeMap * tree, void* key) {
     }
 }
 
-if (ub_node != NULL) {
-  Pair* result = (Pair*)malloc(sizeof(Pair));
-  if (result != NULL) {
-    result->key = ub_node->pair->key;
-    result->value = ub_node->pair->value;
+  if (ub_node != NULL) {
+    Pair* result = (Pair*)malloc(sizeof(Pair));
+    if (result != NULL) {
+      result->key = ub_node->pair->key;
+      result->value = ub_node->pair->value;
+    }
+    return result;
   }
-
-  return NULL;
-}
   
+  return NULL;
+}  
 
 Pair * firstTreeMap(TreeMap * tree) {
   if (tree == NULL || tree->root == NULL) {
@@ -264,4 +265,4 @@ Pair * nextTreeMap(TreeMap * tree) {
     tree->current = parent;
     return (parent != NULL) ? parent->pair : NULL;
   }
-}
+}  
