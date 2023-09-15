@@ -454,3 +454,31 @@ Fri 15 Sep 2023 11:37:20 PM UTC:
  tests:  27|1
 total_score: 60/70
 1bca133
+Fri 15 Sep 2023 11:53:42 PM UTC: 
+ treemap.c | 39 +++++++++++++++++++++++----------------
+ 1 file changed, 23 insertions(+), 16 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:63:12: error: ‘TreeNode’ has no member named ‘key’
+   63 |     newNode->key = key;
+      |            ^~
+treemap.c:64:12: error: ‘TreeNode’ has no member named ‘value’
+   64 |     newNode->value = value;
+      |            ^~
+treemap.c:70:32: error: expected ‘;’ before ‘return’
+   70 |         tree->current = newNode
+      |                                ^
+      |                                ;
+   71 |         return;
+      |         ~~~~~~                  
+treemap.c:79:42: error: ‘TreeNode’ has no member named ‘key’
+   79 |         if (tree->lower_than(key, current->key)) {
+      |                                          ^~
+treemap.c:81:49: error: ‘TreeNode’ has no member named ‘key’
+   81 |         } else if (tree->lower_than(key, current->key)) {
+      |                                                 ^~
+treemap.c:89:41: error: ‘TreeNode’ has no member named ‘key’
+   89 |         if (tree->lower_than(key, parent->key)) {
+      |                                         ^~
+Compilation failed
+5f1d990
