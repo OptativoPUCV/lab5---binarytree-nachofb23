@@ -69,7 +69,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       if (tree->lower_than(key, current->pair->key) < 0) {
         if (current->left == NULL) {
           current->left = newNode;
-          newNode->left = current;
+          newNode->parent = current;
           break;
         } else {
           current = current->left;
@@ -192,7 +192,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         ub_node = current;
         current = current->left;
     } else {
-      current = current-> right;
+      current = current->right;
     }
   }
   
