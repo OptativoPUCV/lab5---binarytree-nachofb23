@@ -158,7 +158,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     }
     if (ub_node != NULL) {
       tree->current = ub_node;
-      return ub_node->current;
+      return ub_node->pair;
     }
     return NULL;
   }
