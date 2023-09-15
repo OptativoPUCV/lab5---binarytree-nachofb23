@@ -148,8 +148,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     if (cmp == 0) {
       tree->current = current;
       return current->pair;
-    } else {
-      if (cmp < 0) {
+    } else if (cmp < 0) {
         ub_node = current;
         current = current->left;
       } else {
@@ -161,7 +160,6 @@ Pair * upperBound(TreeMap * tree, void* key) {
       return ub_node->pair;
     }
     return NULL;
-  }
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
