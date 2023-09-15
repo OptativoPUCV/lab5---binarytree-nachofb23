@@ -128,3 +128,9 @@ treemap.c:169:9: error: ‘TreeMap’ has no member named ‘left’
       |         ^~
 Compilation failed
 12658bc
+Fri 15 Sep 2023 12:09:44 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  13|5
+total_score: 15/70
+1c89b9c
