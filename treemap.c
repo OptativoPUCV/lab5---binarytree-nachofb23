@@ -50,47 +50,43 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 }
 
 
-void insertTreeMap(TreeMap * tree, void* key, void * value) {
-  if (tree == NULL || key == NULL || value == NULL) {
-    return;
-  }
+void insertTreeMap(TreeMap* tree, void* key, void* value) {
+    if (tree == NULL || key == NULL || value == NULL) return;
 
-  TreeNode* newNode = createTreeNode(key, value);
-  if (newNode == NULL) {
-    return;
-  }
+    TreeNode* newNode = createTreeNode(key, value);
+    if (newNode == NULL) return;
 
-  if (tree->root == NULL) {
-    tree->root = newNode;
-    tree->current = newNode;
-  } else {
-    TreeNode* current = tree->root;
-    TreeNode* parent = NULL;
-
-    while (current != NULL) {
-      parent = current;
-      int cmp = tree->lower_than(key, current->pair->key);
-      if (cmp == 0) {
-        free(newNode->pair);
-        free(newNode);
-        return;
-      } else if (cmp < 0) {
-        current = current->left;
-      } else {
-        current = current->right;
-      }
-    }
-
-    newNode->parent = parent;
-    int cmp = tree->lower_than(key, parent->pair->key);
-    if (cmp < 0) {
-      parent->left = newNode;
+    if (tree->root == NULL) {
+        tree->root = newNode;
+        tree->current = newNode;
     } else {
-      parent->right = newNode;
-    }
+        TreeNode* current = tree->root;
+        TreeNode* parent = NULL;
 
-     tree->current = newNode;
-  }
+        while (current != NULL) {
+            parent = current;
+            int cmp = tree->lower_than(key, current->pair->key);
+            if (cmp == 0) {
+                free(newNode->pair);
+                free(newNode);
+                return;
+            } else if (cmp < 0) {
+                current = current->left;
+            } else {
+                current = current->right;
+            }
+        }
+
+        newNode->parent = parent;
+        int cmp = tree->lower_than(key, parent->pair->key);
+        if (cmp < 0) {
+            parent->left = newNode;
+        } else {
+            parent->right = newNode;
+        }
+
+        tree->current = newNode;
+    }
 }
 
 
@@ -106,7 +102,12 @@ TreeNode * minimum(TreeNode * x){
 
 
 void removeNode(TreeMap * tree, TreeNode* node) {
-  return;
+  if (tree == NULL || node == NULL) {
+    return;
+  }
+
+  if (node)
+
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
