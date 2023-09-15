@@ -362,3 +362,46 @@ Fri 15 Sep 2023 08:26:37 PM UTC:
  tests:  23|2
 total_score: 50/70
 6e563de
+Fri 15 Sep 2023 11:23:23 PM UTC: 
+ treemap.c | 23 +++++++++++++++--------
+ 1 file changed, 15 insertions(+), 8 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:202:38: error: ‘TreeNode’ has no member named ‘key’
+  202 |     if (tree->lower_than(key, current->key)) {
+      |                                      ^~
+treemap.c:203:54: error: ‘TreeNode’ has no member named ‘key’
+  203 |       if (ub_node == NULL || tree->lower_than(current->key, ub_node->key)) {
+      |                                                      ^~
+treemap.c:203:68: error: ‘TreeNode’ has no member named ‘key’
+  203 |       if (ub_node == NULL || tree->lower_than(current->key, ub_node->key)) {
+      |                                                                    ^~
+treemap.c:207:40: error: ‘TreeNode’ has no member named ‘key’
+  207 |     } else if (tree->lower_than(current->key, key)) {
+      |                                        ^~
+treemap.c:212:30: error: ‘TreeNode’ has no member named ‘key’
+  212 |         result->key = current->key;
+      |                              ^~
+treemap.c:213:32: error: ‘TreeNode’ has no member named ‘value’
+  213 |         result->value = current->value;
+      |                                ^~
+treemap.c:222:26: error: ‘TreeNode’ has no member named ‘key’
+  222 |     result->key = ub_node->key;
+      |                          ^~
+treemap.c:223:28: error: ‘TreeNode’ has no member named ‘value’
+  223 |     result->value = ub_node->value;
+      |                            ^~
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+test.c:607: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2dc2acf
