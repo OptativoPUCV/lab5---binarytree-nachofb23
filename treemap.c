@@ -199,18 +199,18 @@ Pair * upperBound(TreeMap * tree, void* key) {
   TreeNode* ub_node = NULL;
 
   while (current != NULL) {
-    if (tree->lower_than(key, current->key)) {
-      if (ub_node == NULL || tree->lower_than(current->key, ub_node->key)) {
+    if (tree->lower_than(key, current->pair->key)) {
+      if (ub_node == NULL || tree->lower_than(current->pair->key, ub_node->pair->key)) {
         ub_node = current;
       }
       current = current->left;
-    } else if (tree->lower_than(current->key, key)) {
+    } else if (tree->lower_than(current->pair->key, key)) {
       current = current->right;
     } else {
       Pair* result = (Pair*)malloc(sizeof(Pair));
       if (result != NULL) {
-        result->key = current->key;
-        result->value = current->value;
+        result->key = current->pair->key;
+        result->value = current->pair->value;
       }
       return result;
     }
