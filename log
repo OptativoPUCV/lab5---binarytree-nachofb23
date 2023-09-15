@@ -146,3 +146,17 @@ Fri 15 Sep 2023 12:12:20 AM UTC:
  tests:  15|4
 total_score: 25/70
 4fc7f4d
+Fri 15 Sep 2023 12:18:59 AM UTC: 
+ treemap.c | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:161:21: error: ‘TreeNode’ has no member named ‘current’
+  161 |       return ub_node->current;
+      |                     ^~
+treemap.c:165:1: error: control reaches end of non-void function [-Werror=return-type]
+  165 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+0ce8164
