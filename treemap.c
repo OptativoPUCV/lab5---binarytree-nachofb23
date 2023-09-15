@@ -162,7 +162,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     return ub_node->pair;
   }
   
-  return pepe;
+  return current;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
