@@ -250,3 +250,14 @@ Fri 15 Sep 2023 12:53:19 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 5046260
+Fri 15 Sep 2023 12:55:03 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:89:16: error: ‘current’ undeclared (first use in this function)
+   89 |   tree->root = current;
+      |                ^~~~~~~
+treemap.c:89:16: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+419f231
